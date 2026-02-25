@@ -1,10 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @plugin "tailwindcss-animate";
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: 'Jockey Starline';
+  src: url('/jockey-starline.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
+  --sand-creek-green: #1E3E3C;
+  --sand-creek-olive: #4A5B2A;
+  --sand-creek-light: #FBF6F0;
+  --sand-creek-yellow: #FFF532;
+  --sand-creek-script: 'Jockey Starline', 'Playfair Display', cursive;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -195,5 +209,11 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  .script-accent {
+    font-family: var(--sand-creek-script);
+    font-weight: 400;
+    letter-spacing: 0.04em;
   }
 }
